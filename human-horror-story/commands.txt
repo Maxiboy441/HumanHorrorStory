@@ -1,0 +1,7 @@
+Build and push: docker buildx build --platform linux/amd64,linux/arm64 -t maxiboy44/humanhorrorstory:latest . --push
+
+Build: docker buildx build --platform linux/amd64,linux/arm64 -t maxiboy44/humanhorrorstory:latest .
+
+Run container locally: docker run --platform linux/amd64 -p 3000:3000 maxiboy44/humanhorrorstory:latest
+
+Start dev: npm run dev
