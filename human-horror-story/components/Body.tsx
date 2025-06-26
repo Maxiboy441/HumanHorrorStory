@@ -146,11 +146,11 @@ const eventsSorted = events
     timeframe: e.timeframe * SECONDS_PER_YEAR,
     deathsPerSecond: e.deaths / (e.timeframe * SECONDS_PER_YEAR),
   }))
-  .sort((a, b) => a.deathsPerSecond - b.deathsPerSecond); // ascending order
+  .sort((a, b) => a.deathsPerSecond - b.deathsPerSecond);
 
 export const Body: React.FC = () => (
   <main>
-    {eventsSorted.map(({ deathsPerSecond, ...event }) => (
+    {eventsSorted.map((event) => (
       <Event key={event.title} {...event} />
     ))}
 
